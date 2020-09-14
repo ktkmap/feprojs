@@ -1,3 +1,8 @@
+@media (max-width: 991px) and (min-width: 768px) {
+  .item-boxes .item-box.long-box {
+    flex-basis: 100%;
+  }
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,9 +17,10 @@ h2 {
   display: flex;
   font-size: 0;
   padding: 15px;
+  flex-wrap: wrap;
 }
 .item-boxes .item-box {
-  width: 33%;
+  flex: 1;
   margin: 10px;
   background-color: lightgrey;
   border: 2px solid #292929;
