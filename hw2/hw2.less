@@ -2,6 +2,24 @@
 @border-black: #292929;
 
 @sample-blue: #59a4e4;
+@sample-red: #de4d3e;
+@sample-yellow: #fbda39;
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2
+{
+    margin: 0;
+    font-size: 20px;
+}
+
+.top-title
+{
+    text-align: center;
+}
 
 .item-boxes
 {
@@ -28,11 +46,26 @@
                 display: inline-block;
                 font-size: 17px;
                 text-align: center;
-                padding: 5px;
+                padding: 3px;
                 box-sizing: border-box;
                 background-color: @sample-blue;
                 border: solid black;
                 border-width: 0 0 2px 2px;
+
+                &.blue
+                {
+                    background-color: @sample-blue;
+                }
+
+                &.red
+                {
+                    background-color: @sample-red;
+                }
+
+                &.yellow
+                {
+                    background-color: @sample-yellow;
+                }
             }
         }
 
@@ -40,7 +73,7 @@
         {
             height: 100px;
             font-size: 14px;
-            padding: 9px;
+            padding: 9px 14px 9px 14px;
             overflow: hidden;
 
             &:hover
