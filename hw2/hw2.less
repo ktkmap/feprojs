@@ -37,7 +37,7 @@ h2
 
         .item-box-header
         {
-            height: 30px;
+            min-height: 30px;
             text-align: right;
 
             .header-box
@@ -52,6 +52,11 @@ h2
                 background-color: @sample-blue;
                 border: solid black;
                 border-width: 0 0 2px 2px;
+
+                .mobile-header
+                {
+                    display: none;
+                }
 
                 @class-names: blue,red,yellow;
                 @colours: @sample-blue,@sample-red,@sample-yellow;

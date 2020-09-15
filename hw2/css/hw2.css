@@ -21,7 +21,7 @@ h2 {
   border: 2px solid #292929;
 }
 .item-boxes .item-box .item-box-header {
-  height: 30px;
+  min-height: 30px;
   text-align: right;
 }
 .item-boxes .item-box .item-box-header .header-box {
@@ -35,6 +35,9 @@ h2 {
   background-color: #59a4e4;
   border: solid black;
   border-width: 0 0 2px 2px;
+}
+.item-boxes .item-box .item-box-header .header-box .mobile-header {
+  display: none;
 }
 .item-boxes .item-box .item-box-header .header-box.blue {
   background-color: #59a4e4;
@@ -69,5 +72,11 @@ h2 {
   .item-boxes .item-box .item-box-header .header-box {
     width: 100%;
     border-left-width: 0;
+  }
+  .item-boxes .item-box .item-box-header .header-box .mobile-header {
+    display: block;
+  }
+  .item-boxes .item-box .item-box-header .header-box .not-mobile-header {
+    display: none;
   }
 }
