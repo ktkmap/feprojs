@@ -56,20 +56,14 @@ h2
                 border: solid black;
                 border-width: 0 0 2px 2px;
 
-                &.blue
-                {
-                    background-color: @sample-blue;
-                }
-
-                &.red
-                {
-                    background-color: @sample-red;
-                }
-
-                &.yellow
-                {
-                    background-color: @sample-yellow;
-                }
+                @class-names: blue,red,yellow;
+                @colours: @sample-blue,@sample-red,@sample-yellow;
+                each(@class-names,{
+                    &.@{value}
+                    {
+                        background-color: extract(@colours,@index);
+                    }
+                });
             }
         }
 
