@@ -19,6 +19,8 @@ h2
 .top-title
 {
     text-align: center;
+
+    .mobile-only();
 }
 
 .item-boxes
@@ -53,9 +55,9 @@ h2
                 border: solid black;
                 border-width: 0 0 2px 2px;
 
-                .mobile-header
+                h2
                 {
-                    display: none;
+                    .mobile-only();
                 }
 
                 @class-names: blue,red,yellow;
@@ -75,12 +77,22 @@ h2
             font-size: 14px;
             padding: 9px 14px 9px 14px;
             overflow: hidden;
+            cursor: ns-resize;
 
             &:hover
             {
                 overflow: auto;
             }
         }
+    }
+}
+
+// give this to something to make it disappear if not in mobile
+.mobile-only()
+{
+    &.mobile-only
+    {
+        display: none;
     }
 }
 

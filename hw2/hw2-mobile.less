@@ -1,5 +1,17 @@
 @media (max-width: 767px)
 {
+    .top-title
+    {
+        .mobile-only-mobile();
+        .not-mobile-only();
+
+        &.mobile-left
+        {
+            text-align: left;
+            padding: 0 25px 0 25px;
+        }
+    }
+
     .item-boxes
     {
         flex-direction: column;
@@ -9,15 +21,29 @@
             width: 100%;
             border-left-width: 0;
 
-            .mobile-header
+            h2
             {
-                display: block;
-            }
-
-            .not-mobile-header
-            {
-                display: none;
+                .mobile-only-mobile();
+                .not-mobile-only();
             }
         }
+    }
+}
+
+// give this to something to make it appear in mobile mode
+.mobile-only-mobile()
+{
+    &.mobile-only
+    {
+        display: block;
+    }
+}
+
+// give this to something to make it disappear in mobile mode
+.not-mobile-only()
+{
+    &.not-mobile-only
+    {
+        display: none;
     }
 }
