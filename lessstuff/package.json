@@ -1,8 +1,8 @@
 {
-  "name": "feprojs-hw2",
+  "name": "feprojs",
   "version": "1.0.0",
   "scripts": {
-    "buildless": "lessc hw2.less css/hw2.css"
+    "buildhw2": "lessc hw2/hw2.less ../hw2/css/hw2-build.css"
   },
   "devDependencies": {
     "less": "^3.12.2"
