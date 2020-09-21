@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- note: based off code from example 25 -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -16,68 +17,68 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/hw3.css">
   </head>
-<body>
-  <nav class="navbar navbar-default">
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#top-nav-collapse" aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">hello</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="top-nav-collapse">
+          <ul class="nav navbar-nav visible-xs">
+            <li><a href="#beef-section">beef</a></li>
+            <li><a href="#flan-section">flan</a></li>
+            <li><a href="#fish-section">fish</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="text-center" id="menu-header">our menu</h1>
+
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#top-nav-collapse" aria-expanded="false"
-        >
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand">hello</a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="top-nav-collapse">
-        <ul class="nav navbar-nav visible-xs">
-          <li><a href="#beef-section">beef</a></li>
-          <li><a href="#flan-section">flan</a></li>
-          <li><a href="#fish-section">fish</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <h1 class="text-center" id="menu-header">our menu</h1>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="item-box-outer col-md-4 col-sm-6" id="beef-section">
-        <div class="item-box col-md-12">
-          <h3 class="text-center">beef</h3>
-          <p>
-            Roast beef is a traditional English dish of beef which is roasted. Essentially prepared as a main meal, the leftovers are often used in sandwiches and sometimes are used to make hash. In the United Kingdom, United States, Canada, Ireland, South Africa, New Zealand, and Australia, roast beef is one of the meats traditionally served at Sunday lunch or dinner, although it is also often served as a cold cut in delicatessen stores, usually in sandwiches. A traditional side dish to roast beef is Yorkshire pudding. Roast beef is a signature national dish of England and holds cultural meaning for the English dating back to the 1731 ballad "The Roast Beef of Old England". The dish is so synonymous with England and its cooking methods from the 18th century that a French nickname for the English is "les Rosbifs". A common practice in naming dishes is to name them after an individual. For example, the sandwich — two slices of bread with something between — was named after the Earl of Sandwich. Similar examples include carpaccio named after the Italian painter and Chateaubriand named after the French author. The dish has retained its capitalization while the other examples no longer retain their surname origins. There are several stories about what the original dish was. Dishes are often invented by famous chefs. With French origins, the Larousse Gastronomique indicates that the dish chateaubriand was created by the namesake's personal chef, Montmireil, for the Vicomte François-René de Chateaubriand, at that time (1822) Ambassador of France in England. Montmireil also created what was originally called pudding a la Chateaubriand but would eventually be called simply pudding diplomate. An alternative spelling of the Vicomte's surname is Châteaubriant, which term the Dictionnaire de l'Académie des Gastronomes gives as the source of the beef-cattle bred at the town of Châteaubriant, in the Loire-Atlantique, France.Originally the term itself was applied to the manner of preparation of the meat; however, by the 1870s at its introduction to the English, the term was transferred to the steak or cut of meat itself. Steak originally called filet de bœuf was now served as Chateaubriand. Montmireil originally roasted the Chateaubriand between two lesser cuts of meat. This technique enhanced both flavor and juiciness of the steak.
-          </p>
-          <p><a href="#menu-header">back to top</a></p>
+      <div class="row">
+        <div class="item-box-outer col-md-4 col-sm-6" id="beef-section">
+          <div class="item-box col-md-12">
+            <h3 class="text-center">beef</h3>
+            <p>
+              Roast beef is a traditional English dish of beef which is roasted. Essentially prepared as a main meal, the leftovers are often used in sandwiches and sometimes are used to make hash. In the United Kingdom, United States, Canada, Ireland, South Africa, New Zealand, and Australia, roast beef is one of the meats traditionally served at Sunday lunch or dinner, although it is also often served as a cold cut in delicatessen stores, usually in sandwiches. A traditional side dish to roast beef is Yorkshire pudding. Roast beef is a signature national dish of England and holds cultural meaning for the English dating back to the 1731 ballad "The Roast Beef of Old England". The dish is so synonymous with England and its cooking methods from the 18th century that a French nickname for the English is "les Rosbifs". A common practice in naming dishes is to name them after an individual. For example, the sandwich — two slices of bread with something between — was named after the Earl of Sandwich. Similar examples include carpaccio named after the Italian painter and Chateaubriand named after the French author. The dish has retained its capitalization while the other examples no longer retain their surname origins. There are several stories about what the original dish was. Dishes are often invented by famous chefs. With French origins, the Larousse Gastronomique indicates that the dish chateaubriand was created by the namesake's personal chef, Montmireil, for the Vicomte François-René de Chateaubriand, at that time (1822) Ambassador of France in England. Montmireil also created what was originally called pudding a la Chateaubriand but would eventually be called simply pudding diplomate. An alternative spelling of the Vicomte's surname is Châteaubriant, which term the Dictionnaire de l'Académie des Gastronomes gives as the source of the beef-cattle bred at the town of Châteaubriant, in the Loire-Atlantique, France.Originally the term itself was applied to the manner of preparation of the meat; however, by the 1870s at its introduction to the English, the term was transferred to the steak or cut of meat itself. Steak originally called filet de bœuf was now served as Chateaubriand. Montmireil originally roasted the Chateaubriand between two lesser cuts of meat. This technique enhanced both flavor and juiciness of the steak.
+            </p>
+            <p><a href="#menu-header">back to top</a></p>
+          </div>
         </div>
-      </div>
-      <div class="item-box-outer col-md-4 col-sm-6" id="flan-section">
-        <div class="item-box col-md-12">
-          <h3 class="text-center">flan</h3>
-          <p>
-            A flan, in English and other cuisines, is a dish with an open, rimmed pastry or sponge base containing a sweet or savory filling; examples are quiche lorraine, custard tart, and the South African melktert. Flan is known in Roman cuisine. It was often a savory dish, as in "eel flan"; sweet flans were also enjoyed. In the Middle Ages, both sweet and savory flans (almonds, cinnamon & sugar; cheese, curd, spinach, fish) were very popular in Europe, especially during Lent, when meat was forbidden. The English word "flan", and the earlier forms "flaune" and "flawn", come from the Old French flaon (modern French flan), in turn from the early Medieval Latin fladōn-em, derived from the Old High German flado, a sort of flat cake, probably from an Indo-European root for "flat" or "broad". Crème caramel is a variant of plain custard (crème) where sugar syrup cooked to caramel stage is poured into the mold before adding the custard base. It is usually cooked in a bain-marie on a stovetop or in the oven in a water bath. It is turned and served with the caramel sauce on top, hence the alternate French names crème (caramel) renversée or crème renversée au caramel. The milk may be flavored with vanilla, cinnamon, or lemon peel. The resulting texture is gelatinous and creamy. Turning out larger dishes requires care, as the custard easily splits. Larger dishes also require more care to avoid undercooking the interior or overcooking the exterior. Thus, crème caramel is often cooked and served in individual ramekins. The objective is to obtain a homogeneous and smooth cream on the surface of the crème caramel with a liquid caramel base. Cooking it in a bain-marie avoids burning the caramel. An imitation of crème caramel may be prepared from "instant flan powder", which is thickened with agar or carrageenan rather than eggs. In some Latin American countries, the true custard version is known as "milk flan" (flan de leche) or even "milk cheese", and the substitute version is known as just "flan".
-          </p>
-          <p><a href="#menu-header">back to top</a></p>
+        <div class="item-box-outer col-md-4 col-sm-6" id="flan-section">
+          <div class="item-box col-md-12">
+            <h3 class="text-center">flan</h3>
+            <p>
+              A flan, in English and other cuisines, is a dish with an open, rimmed pastry or sponge base containing a sweet or savory filling; examples are quiche lorraine, custard tart, and the South African melktert. Flan is known in Roman cuisine. It was often a savory dish, as in "eel flan"; sweet flans were also enjoyed. In the Middle Ages, both sweet and savory flans (almonds, cinnamon & sugar; cheese, curd, spinach, fish) were very popular in Europe, especially during Lent, when meat was forbidden. The English word "flan", and the earlier forms "flaune" and "flawn", come from the Old French flaon (modern French flan), in turn from the early Medieval Latin fladōn-em, derived from the Old High German flado, a sort of flat cake, probably from an Indo-European root for "flat" or "broad". Crème caramel is a variant of plain custard (crème) where sugar syrup cooked to caramel stage is poured into the mold before adding the custard base. It is usually cooked in a bain-marie on a stovetop or in the oven in a water bath. It is turned and served with the caramel sauce on top, hence the alternate French names crème (caramel) renversée or crème renversée au caramel. The milk may be flavored with vanilla, cinnamon, or lemon peel. The resulting texture is gelatinous and creamy. Turning out larger dishes requires care, as the custard easily splits. Larger dishes also require more care to avoid undercooking the interior or overcooking the exterior. Thus, crème caramel is often cooked and served in individual ramekins. The objective is to obtain a homogeneous and smooth cream on the surface of the crème caramel with a liquid caramel base. Cooking it in a bain-marie avoids burning the caramel. An imitation of crème caramel may be prepared from "instant flan powder", which is thickened with agar or carrageenan rather than eggs. In some Latin American countries, the true custard version is known as "milk flan" (flan de leche) or even "milk cheese", and the substitute version is known as just "flan".
+            </p>
+            <p><a href="#menu-header">back to top</a></p>
+          </div>
         </div>
-      </div>
-      <div class="item-box-outer col-md-4 col-sm-12" id="fish-section">
-        <div class="item-box col-md-12">
-          <h3 class="text-center">fish</h3>
-          <p>
-            The Atlantic horse mackerel has quite a slender, quite compressed body with a large head in which the rear of the upper jaw reaches the front of the eye and the lower jaw projects beyond the upper jaw. The eye has a well developed adipose eyelid. It has two dorsal fins, the first is tall and has seven thin spines, with the final spine being much shorter than the others. The Atlantic horse mackerel is a benthopelagic species which normally occurs over sandy substrates at depths of 100–200 metres (330–660 ft), although it has been reported as deep as 1,050 metres (3,440 ft) and it is sometimes found nearer the surface waters. It is a migratory species, moving northwards in the summer months and returning southwards when the sea temperature starts to fall. In the north east Atlantic two stocks are recognised, the western stock spawns in a wide area from Ireland to the Bay of Biscay in the early Spring and moves northward to the southern coats of Norway and the northern North Sea in the summer. The North Sea stock spawns in the southern part of the North Sea during the summer and then migrates northwards into the central North Sea, the Skagerrak and the Kattegat. Off Mauritania this species has its main spawning season in November to January while the related Cunene horse mackerel (Trachurus trecae) spawns in June and August. Off Ireland spawning occurs irregularly during the summer from June to August reaching its peak in July. The females spawn in batches, each of up to 140,000 eggs and hatching larvae 5 millimetres (0.20 in) in length. Spawning is indeterminate meaning that the total number of eggs a female can produce is dependent on factors which can change over the course of a spawning season. The eggs and larvae are pelagic. The juveniles of thus species frequently often shoal with the juveniles of other fish species, mainly Atlantic herring (Clupea clupea) and with other species of horse mackerels such as the Mediterranean horse mackerel (T. mediterraneus) and blue jack mackerel (T. picturatus). Juveniles are also often encountered sheltering in the tentacles of jellyfish. In South Africa the maximum recorded age is 24 years while 40 years of age has been recorded in the northeast Atlantic. They are thought to breed from two to four years old for females. Off Mauritania, the juveniles are caught at depths of 200–300 metres (660–980 ft) while mature fish are taken in shallower waters of less than 100 metres (330 ft).The age and growth of the Atlantic horse mackerel vary across its extensive range and are affected by the levels to which stocks are exploited. The diet of this species, in both juveniles and adults, is copepods, shrimps, small fishes and squids. An examination of the stomach contents of Atlantic horse mackerels caught in the Aegean Sea recorded a total of 60 different prey species which belonged to five major systematic groups, polychaetes, crustaceans, molluscs, arrow worms and bony fish. Copepods, Euphasids and Mysids made up the highest percentage of food eaten. Bony fish were the secondmost numerous food ingested, while polychaeta and arrow worms were infrequently recorded food items. The diet showed very little seasonal variation with copepods and mysids making up the largest proportion of prey throughout the year, with fishes being most frequent prey except in the spring. Larger fish, over 16.9 centimetres (6.7 in) fed largely on the larvae of bony fishes. No less than 45 species of copeopod were identified in this study, and Acartia clause and Oncea media were numerous and important throughout the year. Crustaceans were the most important prey to be eaten by this species in all seasons, however, bony fish were the most important prey items for larger fish.
-          </p>
-          <p><a href="#menu-header">back to top</a></p>
+        <div class="item-box-outer col-md-4 col-sm-12" id="fish-section">
+          <div class="item-box col-md-12">
+            <h3 class="text-center">fish</h3>
+            <p>
+              The Atlantic horse mackerel has quite a slender, quite compressed body with a large head in which the rear of the upper jaw reaches the front of the eye and the lower jaw projects beyond the upper jaw. The eye has a well developed adipose eyelid. It has two dorsal fins, the first is tall and has seven thin spines, with the final spine being much shorter than the others. The Atlantic horse mackerel is a benthopelagic species which normally occurs over sandy substrates at depths of 100–200 metres (330–660 ft), although it has been reported as deep as 1,050 metres (3,440 ft) and it is sometimes found nearer the surface waters. It is a migratory species, moving northwards in the summer months and returning southwards when the sea temperature starts to fall. In the north east Atlantic two stocks are recognised, the western stock spawns in a wide area from Ireland to the Bay of Biscay in the early Spring and moves northward to the southern coats of Norway and the northern North Sea in the summer. The North Sea stock spawns in the southern part of the North Sea during the summer and then migrates northwards into the central North Sea, the Skagerrak and the Kattegat. Off Mauritania this species has its main spawning season in November to January while the related Cunene horse mackerel (Trachurus trecae) spawns in June and August. Off Ireland spawning occurs irregularly during the summer from June to August reaching its peak in July. The females spawn in batches, each of up to 140,000 eggs and hatching larvae 5 millimetres (0.20 in) in length. Spawning is indeterminate meaning that the total number of eggs a female can produce is dependent on factors which can change over the course of a spawning season. The eggs and larvae are pelagic. The juveniles of thus species frequently often shoal with the juveniles of other fish species, mainly Atlantic herring (Clupea clupea) and with other species of horse mackerels such as the Mediterranean horse mackerel (T. mediterraneus) and blue jack mackerel (T. picturatus). Juveniles are also often encountered sheltering in the tentacles of jellyfish. In South Africa the maximum recorded age is 24 years while 40 years of age has been recorded in the northeast Atlantic. They are thought to breed from two to four years old for females. Off Mauritania, the juveniles are caught at depths of 200–300 metres (660–980 ft) while mature fish are taken in shallower waters of less than 100 metres (330 ft).The age and growth of the Atlantic horse mackerel vary across its extensive range and are affected by the levels to which stocks are exploited. The diet of this species, in both juveniles and adults, is copepods, shrimps, small fishes and squids. An examination of the stomach contents of Atlantic horse mackerels caught in the Aegean Sea recorded a total of 60 different prey species which belonged to five major systematic groups, polychaetes, crustaceans, molluscs, arrow worms and bony fish. Copepods, Euphasids and Mysids made up the highest percentage of food eaten. Bony fish were the secondmost numerous food ingested, while polychaeta and arrow worms were infrequently recorded food items. The diet showed very little seasonal variation with copepods and mysids making up the largest proportion of prey throughout the year, with fishes being most frequent prey except in the spring. Larger fish, over 16.9 centimetres (6.7 in) fed largely on the larvae of bony fishes. No less than 45 species of copeopod were identified in this study, and Acartia clause and Oncea media were numerous and important throughout the year. Crustaceans were the most important prey to be eaten by this species in all seasons, however, bony fish were the most important prey items for larger fish.
+            </p>
+            <p><a href="#menu-header">back to top</a></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
