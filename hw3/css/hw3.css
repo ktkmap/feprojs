@@ -1,4 +1,12 @@
+.item-box-outer
+{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
 .item-box
 {
+    padding-top: 1px;
+    padding-bottom: 1px;
     background-color: lightgrey;
 }
