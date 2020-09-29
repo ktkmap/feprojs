@@ -67,14 +67,18 @@ WARNING!!! WARNING!!!
 
     //  -- VERSION USING MAP --
     console.log("----- using map -----");
-    var helloGoodbyeNames=names.map((x)=>{
-        if (x[0]=="J" || x[0]=="j")
+
+    function doSpeak(name)
+    {
+        if (name[0]=="J" || name[0]=="j")
         {
-            return byeSpeaker.speakSimple(x);
+            return byeSpeaker.speakSimple(name);
         }
 
-        return helloSpeaker.speakSimple(x);
-    });
+        return helloSpeaker.speakSimple(name);
+    }
+
+    var helloGoodbyeNames=names.map(doSpeak);
 
     for (var x=0;x<helloGoodbyeNames.length;x++)
     {
@@ -83,19 +87,23 @@ WARNING!!! WARNING!!!
 
     // -- VERSION USING REDUCE --
     console.log("----- using reduce -----");
-    var helloGoodbyeNames2=names.reduce((r,x)=>{
-        if (x[0]=="J" || x[0]=="j")
+
+    function doSpeak2(result,name)
+    {
+        if (name[0]=="J" || name[0]=="j")
         {
-            r.goodbye.push(byeSpeaker.speakSimple(x));
+            result.goodbye.push(byeSpeaker.speakSimple(name));
         }
 
         else
         {
-            r.hello.push(helloSpeaker.speakSimple(x));
+            result.hello.push(helloSpeaker.speakSimple(name));
         }
 
-        return r;
-    },{
+        return result;
+    }
+
+    var helloGoodbyeNames2=names.reduce(doSpeak2,{
         hello:[],
         goodbye:[]
     });
