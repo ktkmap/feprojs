@@ -1,0 +1,10 @@
+{
+  "name": "testserver",
+  "version": "1.0.0",
+  "scripts": {
+    "server":"node testserver"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
