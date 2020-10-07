@@ -150,6 +150,36 @@ dc.loadMenuCategories = function () {
     buildAndShowCategoriesHTML);
 };
 
+// rendering about page
+dc.loadAboutPage=()=>{
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    "snippets/about.html",
+    (aboutHtml)=>{
+      // random rating from 0-4
+      var randomRating=Math.floor(Math.random()*5);
+
+      for (var x=0;x<5;x++)
+      {
+        // if star is equal to or below the random rating, colour it
+        if (x<=randomRating)
+        {
+          aboutHtml=insertProperty(aboutHtml,`star${x}`,"fa");
+        }
+
+        else
+        {
+          aboutHtml=insertProperty(aboutHtml,`star${x}`,"far");
+        }
+      }
+
+      aboutHtml=insertProperty(aboutHtml,"randomRating",randomRating+1);
+      insertHtml("#main-content",aboutHtml);
+    },
+    false
+  );
+};
+
 
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
