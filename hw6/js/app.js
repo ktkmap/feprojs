@@ -7,6 +7,7 @@
     {
         $scope.lunchInputValue="";
         $scope.lunchMessage="";
+        $scope.status=null; //null,error,success
 
         $scope.buttonClick=buttonClick;
 
@@ -22,17 +23,19 @@
             if (!numLunch)
             {
                 $scope.lunchMessage="Please enter data first";
-                return;
+                $scope.status="error";
             }
 
             else if (numLunch<=3)
             {
                 $scope.lunchMessage="Enjoy!";
+                $scope.status="success";
             }
 
             else
             {
                 $scope.lunchMessage="Too much!";
+                $scope.status="success";
             }
         }
     }

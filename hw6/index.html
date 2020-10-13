@@ -4,6 +4,7 @@
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/hw6.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
@@ -13,21 +14,23 @@
   </head>
   <body>
     <div class="container" ng-controller="LunchCheckController">
-      <h1>Lunch Checker {{lunchInputValue}}</h1>
+      <h1>Lunch Checker</h1>
 
       <div class="form-group">
         <input id="lunch-menu" type="text"
           placeholder="list comma separated dishes you usually have for lunch"
-          class="form-control"
+          class="form-control lunch-input"
+          ng-class="{error:status=='error',success:status=='success'}"
           ng-model="lunchInputValue">
       </div>
 
       <div class="form-group">
         <p>EMPTY ITEMS AND ITEMS THAT ARE ALL SPACES DO NOT COUNT AS REAL ITEMS. putting all empty items will count as no items.</p>
+        <p>note: instructions said both "enjoy" and "too much" should be green</p>
         <button class="btn btn-default" ng-click="buttonClick()">Check If Too Much</button>
       </div>
 
-      <div class="form-group message">
+      <div class="form-group message" ng-class="{error:status=='error',success:status=='success'}">
         {{lunchMessage}}
       </div>
     </div>
