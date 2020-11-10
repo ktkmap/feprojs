@@ -1,3 +1,3 @@
 (()=>{
-    const app=angular.module("NarrowItDownAp",[]);
+    const app=angular.module("NarrowItDownApp",[]);
 })();
