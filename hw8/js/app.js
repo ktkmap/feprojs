@@ -17,6 +17,13 @@
                 this.found=res;
             });
         };
+
+        this.removeItem=(itemIndex)=>{
+            console.log("removing",itemIndex);
+            this.found=this.found.filter((x)=>{
+                return x.id!=itemIndex;
+            });
+        };
     }
 
     MenuSearchService.$inject=["$http"];
@@ -48,7 +55,8 @@
             templateUrl:"js/found-items.component.html",
             restrict:"E",
             scope:{
-                items:"=foundItems"
+                items:"<foundItems",
+                doRemove:"&onRemove"
             }
         };
     }

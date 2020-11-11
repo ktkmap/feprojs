@@ -1,5 +1,6 @@
 <ol>
   <li ng-repeat="x in items">
-    {{x.name}},{{x.short_name}}
+    {{x.name}},{{x.short_name}},{{x.description}}
+    <button ng-click="doRemove({itemIndex:x.id})">Don't want this one!</button>
   </li>
 </ol>
