@@ -6,17 +6,28 @@
     NarrowItDownController.$inject=["MenuSearchService"];
     function NarrowItDownController(menuSearchService)
     {
-        menuSearchService.getMatchedMenuItems();
+        menuSearchService.getMatchedMenuItems(".*");
     }
 
     MenuSearchService.$inject=["$http"];
     function MenuSearchService($http)
     {
+        // getMatchedMenuItems(searchTerm:string):MenuItem[]
         this.getMatchedMenuItems=async (searchTerm)=>{
-            console.log("hey");
-            console.log((await $http({
+            var menuItems=(await $http({
                 url:"https://davids-restaurant.herokuapp.com/menu_items.json"
-            })).data);
+            })).data.menu_items;
+
+            searchTerm=searchTerm.toLowerCase();
+
+            console.log("all items",menuItems);
+
+            var res=menuItems.filter((x)=>{
+                return x.description.indexOf(searchTerm)>=0;
+            });
+
+            console.log("matched items",res);
+            return res;
         };
     }
 })();
