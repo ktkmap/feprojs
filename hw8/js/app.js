@@ -8,11 +8,12 @@
     function NarrowItDownController(menuSearchService)
     {
         this.found=[];
+        this.found2=[1,2,3];
         this.searchTerm="";
 
         this.searchItems=()=>{
-            this.found=menuSearchService.getMatchedMenuItems(this.searchTerm);
-            console.log(this.found);
+            // this.found=await menuSearchService.getMatchedMenuItems(this.searchTerm);
+            // console.log(this.found);
         };
     }
 
@@ -43,7 +44,10 @@
     {
         return {
             templateUrl:"js/found-items.component.html",
-            restrict:"E"
+            restrict:"E",
+            scope:{
+                items:"=foundItems"
+            }
         };
     }
 })();
