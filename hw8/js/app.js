@@ -4,16 +4,18 @@
     app.service("MenuSearchService",MenuSearchService);
     app.directive("foundItems",FoundItemsComponent);
 
-    NarrowItDownController.$inject=["MenuSearchService"];
-    function NarrowItDownController(menuSearchService)
+    NarrowItDownController.$inject=["$q","MenuSearchService"];
+    function NarrowItDownController($q,menuSearchService)
     {
         this.found=[];
-        this.found2=[1,2,3];
         this.searchTerm="";
 
         this.searchItems=()=>{
-            // this.found=await menuSearchService.getMatchedMenuItems(this.searchTerm);
-            // console.log(this.found);
+            $q(async (resolve)=>{
+                resolve(await menuSearchService.getMatchedMenuItems(this.searchTerm));
+            }).then((res)=>{
+                this.found=res;
+            });
         };
     }
 
@@ -21,7 +23,7 @@
     function MenuSearchService($http)
     {
         // get items from menu api that match the search
-        // getMatchedMenuItems(searchTerm:string):MenuItem[]
+        // async getMatchedMenuItems(searchTerm:string):Promise<MenuItem[]>
         this.getMatchedMenuItems=async (searchTerm)=>{
             var menuItems=(await $http({
                 url:"https://davids-restaurant.herokuapp.com/menu_items.json"
