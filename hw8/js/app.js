@@ -2,6 +2,7 @@
     const app=angular.module("NarrowItDownApp",[]);
     app.controller("NarrowItDownController",NarrowItDownController);
     app.service("MenuSearchService",MenuSearchService);
+    app.directive("foundItems",FoundItemsComponent);
 
     NarrowItDownController.$inject=["MenuSearchService"];
     function NarrowItDownController(menuSearchService)
@@ -35,6 +36,14 @@
 
             console.log("matched items",res);
             return res;
+        };
+    }
+
+    function FoundItemsComponent()
+    {
+        return {
+            templateUrl:"js/found-items.component.html",
+            restrict:"E"
         };
     }
 })();
