@@ -9,12 +9,14 @@
     {
         this.found=[];
         this.searchTerm="";
+        this.firstSearch=false;
 
         this.searchItems=()=>{
             $q(async (resolve)=>{
                 resolve(await menuSearchService.getMatchedMenuItems(this.searchTerm));
             }).then((res)=>{
                 this.found=res;
+                this.firstSearch=true;
             });
         };
 
@@ -32,6 +34,11 @@
         // get items from menu api that match the search
         // async getMatchedMenuItems(searchTerm:string):Promise<MenuItem[]>
         this.getMatchedMenuItems=async (searchTerm)=>{
+            if (!searchTerm.length)
+            {
+                return [];
+            }
+
             var menuItems=(await $http({
                 url:"https://davids-restaurant.herokuapp.com/menu_items.json"
             })).data.menu_items;
@@ -56,7 +63,8 @@
             restrict:"E",
             scope:{
                 items:"<foundItems",
-                doRemove:"&onRemove"
+                doRemove:"&onRemove",
+                firstSearch:"<"
             }
         };
     }
