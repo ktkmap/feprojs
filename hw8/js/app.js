@@ -6,12 +6,19 @@
     NarrowItDownController.$inject=["MenuSearchService"];
     function NarrowItDownController(menuSearchService)
     {
-        menuSearchService.getMatchedMenuItems(".*");
+        this.found=[];
+        this.searchTerm="";
+
+        this.searchItems=()=>{
+            this.found=menuSearchService.getMatchedMenuItems(this.searchTerm);
+            console.log(this.found);
+        };
     }
 
     MenuSearchService.$inject=["$http"];
     function MenuSearchService($http)
     {
+        // get items from menu api that match the search
         // getMatchedMenuItems(searchTerm:string):MenuItem[]
         this.getMatchedMenuItems=async (searchTerm)=>{
             var menuItems=(await $http({
