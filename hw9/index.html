@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="MenuApp">
   <head>
     <title>hw9</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +10,15 @@
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-ui-router.min.js"></script>
 
-    <!-- <script src="js/app.js"></script> -->
+    <script src="js/menuapp.module.js"></script>
+    <script src="js/data.module.js"></script>
+
+    <script src="js/menudata.service.js"></script>
+
+    <script src="js/components/categories/categories.component.js"></script>
   </head>
   <body>
     hello
+    <categories></categories>
   </body>
 </html>
