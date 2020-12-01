@@ -4,22 +4,13 @@
         templateUrl:"js/components/categories/categories.component.html",
         controller:CategoriesComponent,
         bindings:{
-
+            items:"<"
         }
     });
 
-    CategoriesComponent.$inject=["$q","MenuDataService"];
-    function CategoriesComponent($q,menuDataService)
+    CategoriesComponent.$inject=[];
+    function CategoriesComponent()
     {
-        this.categories=[];
-
-        this.$onInit=async ()=>{
-            $q(async (resolve)=>{
-                resolve(await menuDataService.getAllCategories());
-            }).then((res)=>{
-                this.categories=res;
-                console.log("got categories",res);
-            });
-        };
+        this.items=[];
     }
 })();
