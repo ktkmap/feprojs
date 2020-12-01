@@ -11,9 +11,10 @@
     CategoriesComponent.$inject=["MenuDataService"];
     function CategoriesComponent(menuDataService)
     {
-        this.$onInit=()=>{
+        this.$onInit=async ()=>{
             console.log("categories init");
-            menuDataService.getAllCategories();
+            console.log(await menuDataService.getAllCategories());
+            console.log(await menuDataService.getItemsForCategory("L"));
         };
     }
 })();
