@@ -1,4 +1,4 @@
-<h2>categories</h2>
+<h2>categories of resraunt</h2>
 <li ng-repeat="x in $ctrl.items">
-  <a ui-sref="categories.item({categoryShortName:'L'})">{{x.name}}</a>
+  <a ui-sref="items({categoryShortName:x.short_name})">{{x.name}}</a>
 </li>

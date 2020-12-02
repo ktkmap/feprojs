@@ -11,7 +11,7 @@
             templateUrl:"js/pages/home.html"
         })
         .state("categories",{
-            url:"/categories",
+            url:"/categories/",
             templateUrl:"js/pages/categories.html",
             controller:"CategoriesController as categoriesCtrl",
             resolve:{
@@ -20,8 +20,8 @@
                 }]
             }
         })
-        .state("categories.item",{
-            url:"/{categoryShortName}",
+        .state("items",{
+            url:"/categories/{categoryShortName}",
             templateUrl:"js/pages/items.html",
             controller:"ItemsController as itemsCtrl",
             resolve:{
