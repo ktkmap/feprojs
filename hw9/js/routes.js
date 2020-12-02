@@ -12,7 +12,13 @@
         })
         .state("categories",{
             url:"/categories",
-            templateUrl:"js/pages/categories.html"
+            templateUrl:"js/pages/categories.html",
+            controller:"CategoriesController as categoriesCtrl",
+            resolve:{
+                items:["MenuDataService",(menuDataService)=>{
+                    return menuDataService.getAllCategories();
+                }]
+            }
         });
     }
 })();

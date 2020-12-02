@@ -8,18 +8,18 @@
         }
     });
 
-    MenuAppComponent.$inject=["$q","MenuDataService"];
-    function MenuAppComponent($q,menuDataService)
+    MenuAppComponent.$inject=[];
+    function MenuAppComponent()
     {
-        this.categories=[];
+        // this.categories=[];
 
-        this.$onInit=async ()=>{
-            $q(async (resolve)=>{
-                resolve(await menuDataService.getAllCategories());
-            }).then((res)=>{
-                console.log("got categories",res);
-                this.categories=res;
-            });
-        };
+        // this.$onInit=async ()=>{
+        //     $q(async (resolve)=>{
+        //         resolve(await menuDataService.getAllCategories());
+        //     }).then((res)=>{
+        //         console.log("got categories",res);
+        //         this.categories=res;
+        //     });
+        // };
     }
 })();
