@@ -11,6 +11,6 @@
     CategoriesComponent.$inject=[];
     function CategoriesComponent()
     {
-        this.items=[];
+
     }
 })();

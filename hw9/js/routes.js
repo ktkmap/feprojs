@@ -19,6 +19,16 @@
                     return menuDataService.getAllCategories();
                 }]
             }
+        })
+        .state("categories.item",{
+            url:"/{categoryShortName}",
+            templateUrl:"js/pages/items.html",
+            controller:"ItemsController as itemsCtrl",
+            resolve:{
+                items:["MenuDataService","$stateParams",(menuDataService,$stateParams)=>{
+                    return menuDataService.getItemsForCategory($stateParams.categoryShortName);
+                }]
+            }
         });
     }
 })();
