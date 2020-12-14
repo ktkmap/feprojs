@@ -188,3 +188,14 @@ input,button
 {
   color: black;
 }
+
+sign-up .field-description
+{
+  margin: 0;
+  margin-top: 10px;
+}
+
+sign-up .submit-button
+{
+  margin-top: 10px;
+}

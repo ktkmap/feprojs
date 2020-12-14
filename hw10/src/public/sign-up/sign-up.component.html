@@ -1,8 +1,25 @@
 <fieldset>
   <form name="signUpForm" novalidate>
-    <input type="text" name="username" placeholder="enter username" ng-model="$ctrl.username"
-      required minlength="4">
-    {{$ctrl.username}}
+    <div>
+      <p class="field-description">first name:</p>
+      <input type="text" name="firstname" placeholder="first name" ng-model="$ctrl.firstname" required>
+    </div>
+
+    <div>
+      <p class="field-description">last name:</p>
+      <input type="text" name="lastname" placeholder="last name" ng-model="$ctrl.lastname" required>
+    </div>
+
+    <div>
+      <p class="field-description">email:</p>
+      <input type="email" name="email" placeholder="email" ng-model="$ctrl.email" required>
+    </div>
+
+    <div>
+      <p class="field-description">phone number (###-###-#### format):</p>
+      <input type="text" name="phone" placeholder="phone number ###-###-####" ng-model="$ctrl.phone"
+        required pattern="(\d{3})-(\d{3})-(\d{4})">
+    </div>
 
     <div><button ng-disabled="signUpForm.$invalid" class="submit-button">submit</button></div>
   </form>
