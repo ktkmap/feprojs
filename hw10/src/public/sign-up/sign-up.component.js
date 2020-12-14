@@ -8,13 +8,13 @@
         }
     });
 
-    SignUpComponent.$inject=[];
-    function SignUpComponent()
+    SignUpComponent.$inject=["UserInfoService"];
+    function SignUpComponent(userInfoService)
     {
         this.user={};
 
         this.submitUser=()=>{
-            console.log(this.user);
+            userInfoService.addUser(this.user);
         };
     }
 })();
