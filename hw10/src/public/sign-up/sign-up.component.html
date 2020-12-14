@@ -2,17 +2,17 @@
   <form name="signUpForm" novalidate>
     <div>
       <p class="field-description">first name:</p>
-      <input type="text" name="firstname" placeholder="first name" ng-model="$ctrl.firstname" required>
+      <input type="text" name="firstname" placeholder="first name" ng-model="$ctrl.user.firstname" required>
     </div>
 
     <div>
       <p class="field-description">last name:</p>
-      <input type="text" name="lastname" placeholder="last name" ng-model="$ctrl.lastname" required>
+      <input type="text" name="lastname" placeholder="last name" ng-model="$ctrl.user.lastname" required>
     </div>
 
     <div>
       <p class="field-description">email:</p>
-      <input type="email" name="email" placeholder="email" ng-model="$ctrl.email" required>
+      <input type="email" name="email" placeholder="email" ng-model="$ctrl.user.email" required>
       <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
         email looks invalid
       </span>
@@ -20,7 +20,7 @@
 
     <div>
       <p class="field-description">phone number (###-###-#### format):</p>
-      <input type="text" name="phone" placeholder="phone number ###-###-####" ng-model="$ctrl.phone"
+      <input type="text" name="phone" placeholder="phone number ###-###-####" ng-model="$ctrl.user.phone"
         required pattern="(\d{3})-(\d{3})-(\d{4})">
       <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
         phone number looks invalid
@@ -29,9 +29,9 @@
 
     <div>
       <p class="field-description">favourite dish (short name code):</p>
-      <input type="text" name="favourite" placeholder="favourite dish" ng-model="$ctrl.favourite" required>
+      <input type="text" name="favourite" placeholder="favourite dish" ng-model="$ctrl.user.favourite" required>
     </div>
 
-    <div><button ng-disabled="signUpForm.$invalid" class="submit-button">submit</button></div>
+    <div><button ng-disabled="signUpForm.$invalid" class="submit-button" ng-click="$ctrl.submitUser()">submit</button></div>
   </form>
 </fieldset>

@@ -11,10 +11,10 @@
     SignUpComponent.$inject=[];
     function SignUpComponent()
     {
-        this.username="";
+        this.user={};
 
-        this.$onChanges=()=>{
-            console.log(this.username);
+        this.submitUser=()=>{
+            console.log(this.user);
         };
     }
 })();
