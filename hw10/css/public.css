@@ -183,3 +183,8 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+
+input,button
+{
+  color: black;
+}
