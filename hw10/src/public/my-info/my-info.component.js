@@ -8,9 +8,16 @@
         }
     });
 
-    MyInfoComponent.$inject=[];
-    function MyInfoComponent()
+    MyInfoComponent.$inject=["UserInfoService"];
+    function MyInfoComponent(userInfoService)
     {
+        this.noRegisteredUser=true;
 
+        this.$onInit=()=>{
+            if (userInfoService.registeredUser)
+            {
+                this.noRegisteredUser=false;
+            }
+        };
     }
 })();

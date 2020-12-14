@@ -12,9 +12,11 @@
     function SignUpComponent(userInfoService)
     {
         this.user={};
+        this.completed=false;
 
         this.submitUser=()=>{
             userInfoService.addUser(this.user);
+            this.completed=true;
         };
     }
 })();
