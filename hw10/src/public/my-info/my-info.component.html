@@ -1,3 +1,11 @@
-<p ng-if="$ctrl.noRegisteredUser">
+<p ng-if="!$ctrl.userLoaded">
   Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
 </p>
+<div class="user-info" ng-if="$ctrl.userLoaded">
+  <h3>My Info</h3>
+  <p>name: {{$ctrl.currentUser.lastname}}, {{$ctrl.currentUser.firstname}}</p>
+  <p>email: {{$ctrl.currentUser.email}}</p>
+  <p>phone: {{$ctrl.currentUser.phone}}</p>
+  <p>favourite item: {{$ctrl.favouriteItemName}}</p>
+  <img src="{{$ctrl.favouriteItemImg}}">
+</div>

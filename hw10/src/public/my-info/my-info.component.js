@@ -11,16 +11,26 @@
     MyInfoComponent.$inject=["UserInfoService","MenuService"];
     function MyInfoComponent(userInfoService,menuService)
     {
-        this.noRegisteredUser=true;
+        this.userLoaded=false;
+        this.currentUser=null;
 
-        this.$onInit=()=>{
+        this.favouriteItemName=null;
+        this.favouriteItemImg="";
+
+        this.$onInit=async ()=>{
             if (userInfoService.registeredUser)
             {
-                this.noRegisteredUser=false;
-            }
+                console.log("loading user",userInfoService.registeredUser);
+                this.currentUser=userInfoService.registeredUser;
+                this.userLoaded=true;
 
-            // TESTING
-            menuService.getMenuItem("L16");
+                var favouriteId=userInfoService.registeredUser.favourite;
+
+                this.favouriteItemImg=`https://ktkm-feprojs.herokuapp.com/images/${favouriteId}.jpg`;
+
+                var favouriteItemInfo=await menuService.getMenuItem(favouriteId);
+                this.favouriteItemName=favouriteItemInfo.name;
+            }
         };
     }
 })();
