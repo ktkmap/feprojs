@@ -6,6 +6,7 @@
   <p>name: {{$ctrl.currentUser.lastname}}, {{$ctrl.currentUser.firstname}}</p>
   <p>email: {{$ctrl.currentUser.email}}</p>
   <p>phone: {{$ctrl.currentUser.phone}}</p>
-  <p>favourite item: {{$ctrl.favouriteItemName}}</p>
+  <p>favourite item: {{$ctrl.currentUser.favouriteInfo.name}}</p>
+  <p>{{$ctrl.currentUser.favouriteInfo.description}}</p>
   <img src="{{$ctrl.favouriteItemImg}}">
 </div>

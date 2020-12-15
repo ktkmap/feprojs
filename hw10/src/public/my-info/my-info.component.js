@@ -8,13 +8,12 @@
         }
     });
 
-    MyInfoComponent.$inject=["UserInfoService","MenuService"];
-    function MyInfoComponent(userInfoService,menuService)
+    MyInfoComponent.$inject=["UserInfoService"];
+    function MyInfoComponent(userInfoService)
     {
         this.userLoaded=false;
         this.currentUser=null;
 
-        this.favouriteItemName=null;
         this.favouriteItemImg="";
 
         this.$onInit=async ()=>{
@@ -22,14 +21,11 @@
             {
                 console.log("loading user",userInfoService.registeredUser);
                 this.currentUser=userInfoService.registeredUser;
-                this.userLoaded=true;
 
                 var favouriteId=userInfoService.registeredUser.favourite;
-
                 this.favouriteItemImg=`https://ktkm-feprojs.herokuapp.com/images/${favouriteId}.jpg`;
 
-                var favouriteItemInfo=await menuService.getMenuItem(favouriteId);
-                this.favouriteItemName=favouriteItemInfo.name;
+                this.userLoaded=true;
             }
         };
     }
