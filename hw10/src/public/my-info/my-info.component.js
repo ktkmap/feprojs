@@ -8,8 +8,8 @@
         }
     });
 
-    MyInfoComponent.$inject=["UserInfoService"];
-    function MyInfoComponent(userInfoService)
+    MyInfoComponent.$inject=["UserInfoService","MenuService"];
+    function MyInfoComponent(userInfoService,menuService)
     {
         this.noRegisteredUser=true;
 
@@ -18,6 +18,9 @@
             {
                 this.noRegisteredUser=false;
             }
+
+            // TESTING
+            menuService.getMenuItem("L16");
         };
     }
 })();
