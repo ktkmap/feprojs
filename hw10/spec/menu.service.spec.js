@@ -3,8 +3,6 @@ describe("menu",()=>{
     var $httpBackend;
     var apiPath;
 
-    const testItems=["A4","C11","DS1"];
-
     beforeEach(()=>{
         module("common");
 
@@ -16,9 +14,10 @@ describe("menu",()=>{
     });
 
     it("should return correct menu item info",async ()=>{
-        // $httpBackend.whenGET(`${apiPath}/menu_items/A4.json`).respond("hello");
-        menuService.getMenuItem("A4").then((res)=>{
-            console.log(res);
+        $httpBackend.whenGET(`${apiPath}/menu_items/A4.json`).respond("hello");
+        menuService.getMenuItemNoAsync("A4").then((res)=>{
+            expect(res.data).toEqual("hello");
         });
+        $httpBackend.flush();
     });
 });

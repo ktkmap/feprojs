@@ -45,6 +45,22 @@ function MenuService($http, ApiPath) {
     return res;
   };
 
+  /** get json for an item, give it shortname of item to get*/
+  this.getMenuItemNoAsync=(shortname)=>{
+    try
+    {
+      var res=$http.get(`${ApiPath}/menu_items/${shortname}.json`);
+    }
+
+    catch (e)
+    {
+      console.log(`failed to get menu item ${shortname}`);
+    }
+
+    console.log("got menu item",res);
+    return res;
+  };
+
 }
 
 
