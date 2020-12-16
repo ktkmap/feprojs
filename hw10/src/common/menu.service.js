@@ -33,9 +33,7 @@ function MenuService($http, ApiPath) {
   this.getMenuItem=async (shortname)=>{
     try
     {
-      var res=(await $http({
-        url:`${ApiPath}/menu_items/${shortname}.json`
-      })).data;
+      var res=(await $http.get(`${ApiPath}/menu_items/${shortname}.json`)).data;
     }
 
     catch (e)

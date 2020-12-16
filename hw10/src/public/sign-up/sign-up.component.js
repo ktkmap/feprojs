@@ -17,8 +17,15 @@
         this.favouriteInvalid=false;
 
         this.submitUser=async ()=>{
+            await this.favouriteBlur();
+
+            if (this.favouriteInvalid)
+            {
+                return;
+            }
+
             this.user.favouriteInfo=await menuService.getMenuItem(this.user.favourite);
-            userInfoService.addUser(this.user);
+            userInfoService.addUser({...this.user});
             this.completed=true;
         };
 

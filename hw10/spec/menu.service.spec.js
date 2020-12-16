@@ -3,6 +3,8 @@ describe("menu",()=>{
     var $httpBackend;
     var apiPath;
 
+    const testItems=["A4","C11","DS1"];
+
     beforeEach(()=>{
         module("common");
 
@@ -10,16 +12,13 @@ describe("menu",()=>{
             menuService=$injector.get("MenuService");
             $httpBackend=$injector.get("$httpBackend");
             apiPath=$injector.get("ApiPath");
-
-            console.log("api path",apiPath);
         });
     });
 
-    it("should return correct menu item",()=>{
-        $httpBackend.whenGET(apiPath + '/categories.json').respond(['Lunch', 'Dessert']);
-        menucategories.getCategories().then(function(response) {
-          expect(response.data).toEqual(['Lunch', 'Dessert']);
+    it("should return correct menu item info",async ()=>{
+        // $httpBackend.whenGET(`${apiPath}/menu_items/A4.json`).respond("hello");
+        menuService.getMenuItem("A4").then((res)=>{
+            console.log(res);
         });
-        $httpBackend.flush();
     });
 });
