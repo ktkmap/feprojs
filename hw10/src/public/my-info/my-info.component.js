@@ -8,8 +8,8 @@
         }
     });
 
-    MyInfoComponent.$inject=["UserInfoService"];
-    function MyInfoComponent(userInfoService)
+    MyInfoComponent.$inject=["UserInfoService","ApiPath"];
+    function MyInfoComponent(userInfoService,apiPath)
     {
         this.userLoaded=false;
         this.currentUser=null;
@@ -23,7 +23,7 @@
                 this.currentUser=userInfoService.registeredUser;
 
                 var favouriteId=userInfoService.registeredUser.favourite;
-                this.favouriteItemImg=`https://ktkm-feprojs.herokuapp.com/images/${favouriteId}.jpg`;
+                this.favouriteItemImg=`${apiPath}/images/${favouriteId}.jpg`;
 
                 this.userLoaded=true;
             }
